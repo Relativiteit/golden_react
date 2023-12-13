@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import * as React from 'react';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import ProTip from './ProTip';
+import ResponsiveAppBar from './components/ResponsiveAppBar';
+import goldenlogisticsImage from './assets/goldenlogistics.jpeg'; // Use import to load the image
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Copyright() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Golden Logistics
+      </Link>{' '}
+      {new Date().getFullYear()}.
+    </Typography>
+  );
 }
 
-export default App
+export default function App() {
+  return (
+      <Box>
+      <ResponsiveAppBar/>
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Golden Logistics, wij helpen u met al uw vervoer wensen
+       </Typography>
+       <img src={goldenlogisticsImage} alt="Golden Logistics" /> {/* Use the imported image */}        <ProTip />
+        <Copyright />
+      </Box>
+
+      </Box>
+    
+  );
+}
