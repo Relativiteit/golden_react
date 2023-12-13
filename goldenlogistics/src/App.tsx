@@ -24,9 +24,10 @@ export default function App() {
       <ResponsiveAppBar/>
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Golden Logistics, wij helpen u met al uw vervoer wensen
+          Golden Logistics, wij helpen u met al uw vervoer wensen!
        </Typography>
-       <img src={goldenlogisticsImage} alt="Golden Logistics" /> {/* Use the imported image */}        <ProTip />
+       <img src={goldenlogisticsImage} alt="Golden Logistics" /> {/* Use the imported image */}        
+       <ProTip />
         <Copyright />
       </Box>
 
