@@ -11,6 +11,7 @@ import goldenlogisticsImage from './assets/goldenlogistics.jpeg';
 import truckSideImage from './assets/truck_side.jpeg';
 import truckRowImage from './assets/truck_row.jpeg';
 import truckContainerImage from './assets/truck_container.jpeg';
+import Banner from './components/ Banner';
 
 
 function Copyright() {
@@ -41,9 +42,8 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>      <ResponsiveAppBar/>
       <Box sx={{ my: 4, textAlign: 'center'}} >
-        <Typography variant="h4" component="h1" gutterBottom align='center'>
-          <h4>Golden Logistics, wij helpen u graag logistieke wensen!</h4>
-       </Typography>
+       
+       <Banner/>
        <img
           src={goldenlogisticsImage}
           alt="Golden Logistics"
@@ -82,18 +82,7 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
         
 
 
-          <img
-          src={truckRowImage}
-          alt="Golden Logistics"
-          style={{
-            display: 'flex',
-            margin: 'auto',
-            width: '100%',
-            maxWidth: '100%',
-            height: 'auto',
-          }}
-        /> 
-
+         
         <Typography component="legend"> Klant tevredenheid</Typography>\
           <Rating name="read-only" defaultValue={5}  readOnly/>
        <ProTip  />

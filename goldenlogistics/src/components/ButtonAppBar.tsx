@@ -21,7 +21,12 @@ export default function ButtonAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}  style={{ 
+  color: 'white',
+  WebkitTextStroke: '1px #FFD700', // For Webkit (Chrome, Safari)
+  textStroke: '1px #FFD700', // Standard
+  fontSize: '2rem', // Adjust the font size as needed
+}}>
             Golden Logistics
           </Typography>
           <Button color="inherit">Diensten</Button>
