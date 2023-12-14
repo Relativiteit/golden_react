@@ -2,6 +2,7 @@ import * as React from 'react';
 import Link from '@mui/material/Link';
 import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
 import Typography from '@mui/material/Typography';
+import BusinessIcon from '@mui/icons-material/Business';
 
 function LightBulbIcon(props: SvgIconProps) {
   return (
@@ -13,11 +14,10 @@ function LightBulbIcon(props: SvgIconProps) {
 
 export default function ProTip() {
   return (
-    <Typography sx={{ mt: 6, mb: 3 }} color="text.secondary">
-      <LightBulbIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
-      {'Pro tip: See more '}
-      <Link href="https://mui.com/material-ui/getting-started/templates/">templates</Link>
-      {' in the Material UI documentation.'}
+    <Typography sx={{ mt: 6, mb: 3 }} color="text.secondary" align='center'>
+      <BusinessIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
+      {'KVK: 80446132  '}
+      
     </Typography>
   );
 }
