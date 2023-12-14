@@ -55,10 +55,10 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
           <Modal open={isPhoneModalOpen} onClose={hidePhoneModal}>
           <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 400, bgcolor: 'background.paper', border: '2px solid #000', p: 4 }}>
             <Typography variant="h6" component="h2" gutterBottom>
-              Contact Information
+              Bellen is sneller!
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Phone: +1234567890 {/* Replace this with your client's phone number */}
+            <Typography variant="body2" color="text.secondary" style={{ fontSize: '2rem' }}>              
+            Telefoon: +31618018080 
             </Typography>
           </Box>
         </Modal>
