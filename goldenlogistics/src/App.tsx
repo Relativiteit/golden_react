@@ -35,7 +35,7 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
  };
 
  const hidePhoneModal = () => {
-  setPhoneModalOpen(false);img
+  setPhoneModalOpen(false);
  };
 
   return (
@@ -51,13 +51,19 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
             display: 'flex',
             margin: 'auto',
             width: '100%',
-            maxWidth: '100%',
+            maxWidth: '20%',
             height: 'auto',
           }}
         /> 
 
         
-        <Button variant="contained" sx={{ fontSize: '3rem', padding: '15px 30px', marginTop: -130 }} onClick={showPhoneModal} >
+        <Button variant="contained" sx={{ 
+          fontSize: '3rem', 
+          padding: '15px 30px', 
+          marginTop: -10, 
+          marginBottom: 10, 
+          position: 'relative' }} 
+          onClick={showPhoneModal} >
           Neem Contact op per Telefoon!
           </Button>  
 
