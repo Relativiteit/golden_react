@@ -8,9 +8,6 @@ import ResponsiveAppBar from './components/ResponsiveAppBar';
 import ProTip from './ProTip';
 
 import goldenlogisticsImage from './assets/goldenlogistics.jpeg'; 
-import truckSideImage from './assets/truck_side.jpeg';
-import truckRowImage from './assets/truck_row.jpeg';
-import truckContainerImage from './assets/truck_container.jpeg';
 import Banner from './components/ Banner';
 
 
