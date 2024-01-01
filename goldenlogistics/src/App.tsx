@@ -2,7 +2,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import { Button, Modal, Rating } from '@mui/material';
+import { Button, Divider, Modal, Rating } from '@mui/material';
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import ProTip from './ProTip';
@@ -44,6 +44,8 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
       <Box sx={{ my: 4, textAlign: 'center'}} >
        
        <Banner/>
+       <Divider/>
+
        <img
           src={goldenlogisticsImage}
           alt="Golden Logistics"
@@ -66,6 +68,7 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
           onClick={showPhoneModal} >
           Neem Contact op per Telefoon!
           </Button>  
+       
 
           <Modal open={isPhoneModalOpen} onClose={hidePhoneModal}>
           <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 400, bgcolor: 'background.paper', border: '2px solid #000', p: 4 }}>
@@ -81,9 +84,11 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
         
         
 
+        <Divider/>
 
          
-        <Typography component="legend"> Klant tevredenheid</Typography>\
+        <Typography component="legend"> Klant tevredenheid</Typography>
+        
           <Rating name="read-only" defaultValue={5}  readOnly/>
        <ProTip  />
         <Copyright />
