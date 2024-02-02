@@ -6,7 +6,7 @@ import truckRowImage from '../assets/truck_row.jpeg';
 import truckContainerImage from '../assets/truck_container.jpeg'
 
 function Banner() {
-  const images = [truckSideImage, truckRowImage, truckContainerImage];
+  const images = [truckRowImage];
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
   React.useEffect(() => {

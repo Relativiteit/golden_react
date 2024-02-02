@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import { Button, Divider, Modal, Rating } from '@mui/material';
 
-import ResponsiveAppBar from './components/ResponsiveAppBar';
 import ProTip from './ProTip';
 
 import goldenlogisticsImage from './assets/goldenlogistics.jpeg'; 
@@ -37,7 +36,7 @@ const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
  };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>      <ResponsiveAppBar/>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>      
       <Box sx={{ my: 4, textAlign: 'center'}} >
        
        <Banner/>
