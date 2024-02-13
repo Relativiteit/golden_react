@@ -5,13 +5,9 @@ import Link from '@mui/material/Link';
 import { Button, Divider, Modal, Rating } from '@mui/material';
 
 import ProTip from './ProTip';
-
-import goldenlogisticsImage from './assets/goldenlogistics.jpeg'; 
-import Banner from './components/ Banner';
-
-
+import Banner from  "./components/ Banner"
+import BannerContent from './components/BannerContent';
 function Copyright() {
-
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
@@ -24,73 +20,41 @@ function Copyright() {
 }
 
 export default function App() {
-const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
+  const [isPhoneModalOpen, setPhoneModalOpen] = React.useState(false);
 
+  const showPhoneModal = () => {
+    setPhoneModalOpen(true);
+  };
 
- const showPhoneModal = () => {
-  setPhoneModalOpen(true);
- };
-
- const hidePhoneModal = () => {
-  setPhoneModalOpen(false);
- };
+  const hidePhoneModal = () => {
+    setPhoneModalOpen(false);
+  };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>      
-      <Box sx={{ my: 4, textAlign: 'center'}} >
-       
-       <Banner/>
-       <Divider/>
-
-       <img
-          src={goldenlogisticsImage}
-          alt="Golden Logistics"
-          style={{
-            display: 'flex',
-            margin: 'auto',
-            width: '100%',
-            maxWidth: '20%',
-            height: 'auto',
-          }}
-        /> 
-
-        
-        <Button variant="contained" sx={{ 
-          fontSize: '3rem', 
-          padding: '15px 30px', 
-          marginTop: -10, 
-          marginBottom: 10, 
-          position: 'relative' }} 
-          onClick={showPhoneModal} >
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <Box sx={{  textAlign: 'center' }}>
+        <Banner /> {/* Render the Banner component here */}
+        <BannerContent/>
+        <Divider />
+        <Button variant="contained" sx={{ fontSize: '1rem', padding: '15px 30px', marginTop: -10, marginBottom: 10, position: 'relative' }} onClick={showPhoneModal}>
           Neem Contact op per Telefoon!
-          </Button>  
-       
-
-          <Modal open={isPhoneModalOpen} onClose={hidePhoneModal}>
+        </Button>
+        <Modal open={isPhoneModalOpen} onClose={hidePhoneModal}>
           <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 400, bgcolor: 'background.paper', border: '2px solid #000', p: 4 }}>
             <Typography variant="h6" component="h2" gutterBottom>
               Bellen is sneller!
             </Typography>
-            <Typography variant="body2" color="text.secondary" style={{ fontSize: '2rem' }}>              
-            Telefoon: +31618018080 
+            <Typography variant="body2" color="text.secondary" style={{ fontSize: '2rem' }}>
+              Telefoon: +31618018080
             </Typography>
           </Box>
         </Modal>
-
-        
-        
-
-        <Divider/>
-
-         
+        <Divider />
         <Typography component="legend"> Klant tevredenheid</Typography>
-        
-          <Rating name="read-only" defaultValue={5}  readOnly/>
-       <ProTip  />
+        <Rating name="read-only" defaultValue={5} readOnly />
+        <ProTip />
         <Copyright />
       </Box>
-
-      </Box>
-    
+    </Box>
   );
 }

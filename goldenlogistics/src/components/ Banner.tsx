@@ -1,9 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import truckSideImage from '../assets/truck_side.jpeg';
 import truckRowImage from '../assets/truck_row.jpeg';
-import truckContainerImage from '../assets/truck_container.jpeg'
 
 function Banner() {
   const images = [truckRowImage];
@@ -23,27 +21,34 @@ function Banner() {
     <Box
       sx={{
         position: 'relative',
-        height: '400px', // Set your desired height
+        height: '50vh', // Set your desired height
         overflow: 'hidden',
+        marginTop: 0,
+        marginBottom: 0,
+
       }}
     >
       <img
         src={currentImage}
         alt="Golden Logistics"
         style={{
-          width: '100%',
+          width: '100vw', // span entire width
           height: '100%',
           objectFit: 'cover',
+          marginTop: 0,
         }}
       />
       <Box
         sx={{
           position: 'absolute',
-          top: '50%',
+          top: '100%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
           textAlign: 'center',
           color: 'white',
+          padding: '20px',
+          backgroundColor: '#f5f5f5'
+          
         }}
       >
         <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }} 
@@ -52,12 +57,13 @@ function Banner() {
             fontSize: '2rem', // Adjust the font size as needed
                  }}
 >
-        Altijd Gouden Kwaliteit
+            Altijd Gouden Kwaliteit
         </Typography>
         <Typography variant="body1" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.6)' }}>
-Samen met u, gaan we verder dan logistiek. Meer dan alleen uw internationale logistieke partner. Wij brengen de beloften die u aan uw klanten maakt tot leven. Met ondernemingszin en een persoonlijke benadering ontzorgen we u met op maat gemaakte end-to-end supply chain-oplossingen. In de markten van Machines, Industrie en Chemie.
+            Samen met u, gaan we verder dan logistiek. Meer dan alleen uw internationale logistieke partner. Wij brengen de beloften die u aan uw klanten maakt tot leven. Met ondernemingszin en een persoonlijke benadering ontzorgen we u met op maat gemaakte end-to-end supply chain-oplossingen. In de markten van Machines, Industrie en Chemie.
 
-Wij kijken verder dan logistiek. Wij zijn Golden Logistics, waar we niet alleen zaken doen, maar waar we een familie zijn.        </Typography>
+            Wij kijken verder dan logistiek. Wij zijn Golden Logistics, waar we niet alleen zaken doen, maar waar we een familie zijn.        
+        </Typography>
       </Box>
     </Box>
   );
