@@ -36,22 +36,23 @@ export default function App() {
         <Banner /> {/* Render the Banner component here */}
         <BannerContent/>
         <Divider />
-        <Button variant="contained" sx={{ fontSize: '1rem', padding: '15px 30px', marginTop: -10, marginBottom: 10, position: 'relative' }} onClick={showPhoneModal}>
-          Neem Contact op per Telefoon!
-        </Button>
+        
         <Modal open={isPhoneModalOpen} onClose={hidePhoneModal}>
           <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 400, bgcolor: 'background.paper', border: '2px solid #000', p: 4 }}>
-            <Typography variant="h6" component="h2" gutterBottom>
-              Bellen is sneller!
-            </Typography>
+            
             <Typography variant="body2" color="text.secondary" style={{ fontSize: '2rem' }}>
               Telefoon: +31618018080
             </Typography>
           </Box>
         </Modal>
         <Divider />
-        <Typography component="legend"> Klant tevredenheid</Typography>
-        <Rating name="read-only" defaultValue={5} readOnly />
+        <Box sx= {{ position: 'absolute', top: '100%' ,left:'50%'}}> 
+          <Typography component="legend">
+           Klant tevredenheid
+          </Typography>
+          <Rating name="read-only" defaultValue={5} readOnly />
+
+        </Box>
         <ProTip />
         <Copyright />
       </Box>

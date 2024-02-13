@@ -23,15 +23,18 @@ function BannerContent() {
         <Typography variant='h5'>
             Golden Logistics brengt u verder
         </Typography>
-      <Typography variant="body1">
-        Samen met u, gaan we verder dan logistiek. Meer dan alleen uw internationale logistieke partner. Wij brengen de beloften die u aan uw klanten maakt tot leven. Met ondernemingszin en een persoonlijke benadering ontzorgen we u met op maat gemaakte end-to-end supply chain-oplossingen. In de markten van Machines, Industrie en Chemie.
-      </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2 }}>
+        <Typography variant="body1">
+          Samen met u, gaan we verder dan logistiek. Meer dan alleen uw internationale logistieke partner. Wij brengen de beloften die u aan uw klanten maakt tot leven. Met ondernemingszin en een persoonlijke benadering ontzorgen we u met op maat gemaakte end-to-end supply chain-oplossingen. In de markten van Machines, Industrie en Chemie.
+        </Typography>
+        <Button variant="contained" sx={{ ml: 2, color: 'black', backgroundColor: '#f4c216', width: 'fit-content'  }}>
+          Contact
+        </Button>
+      </Box>
       <Typography variant="body1" sx={{ mt: 2 }}>
         Wij kijken verder dan logistiek. Wij zijn Golden Logistics, waar we niet alleen zaken doen, maar waar we een familie zijn.
       </Typography>
-      <Button variant="contained" sx={{ mt: 2 }}>
-        Contact
-      </Button>
+    
     </Box>
   );
 }
