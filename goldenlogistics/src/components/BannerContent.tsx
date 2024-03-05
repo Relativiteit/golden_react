@@ -10,13 +10,13 @@ function BannerContent() {
       sx={{
         position: 'absolute',
         top: '50%',
-        left: '50%',
+        left: '30%',
         transform: 'translate(-50%, -50%)',
         textAlign: 'center',
         color: 'black',
-        padding: '20px',
+        padding: '30px',
         backgroundColor: '#f5f5f5',
-        opacity: 0.9 
+        opacity: 1 
         // Semi-transparent background
       }}
     >
