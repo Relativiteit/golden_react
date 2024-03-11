@@ -9,10 +9,11 @@ import Banner from  "./components/ Banner"
 import BannerContent from './components/BannerContent';
 import BannerYellowContent from './components/BannerYellowContent';
 import ButtonAppBar from './components/ButtonAppBar';
+import BannerBlackContent from './components/BannerBlackContent';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography variant="body2" color="text.secondary" align="center"  >
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
         Golden Logistics
@@ -42,20 +43,25 @@ export default function App() {
         <BannerYellowContent/>
 
         <Divider />
-        
-        <Divider />
-        <Box sx= {{ position: 'absolute', top: '100%' ,left:'50%'}}> 
+        <BannerBlackContent position={{ top: '80%', left: '30%' }} picture="./assets/truck_container.jpeg" />
+        <BannerBlackContent position={{ top: '80%', left: '50%' }} picture="goldenlogistics\src\assets\truck_row.jpeg" />
+        <BannerBlackContent position={{ top: '80%', left: '70%' }} picture="goldenlogistics\src\assets\truck_side.jpeg" />
+
+        <Box sx= {{ position: 'absolute', bottom: '0%' ,left:'50%'}}> 
           <Typography component="legend">
            Klant tevredenheid
           </Typography>
           <Rating name="read-only" defaultValue={5} readOnly />
         </Box>
 
+
         
 
 
         <ProTip />
-        <Copyright />
+        <Box sx= {{ position: 'absolute', bottom: '10%' ,left:'50%'}}> 
+         <Copyright />
+         </Box>
       </Box>
     </Box>
   );
